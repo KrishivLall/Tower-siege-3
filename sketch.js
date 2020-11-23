@@ -52,10 +52,7 @@ function setup() {
 
 function draw() {
 
-  noStroke();
-  textSize(20);
-  fill("white");
-  text("SCORE: " + score, 500, 200);
+ 
 
   Engine.update(engine);
   
@@ -63,6 +60,12 @@ function draw() {
         background(backgroundImg);
   }
   
+  noStroke();
+  textSize(20);
+  fill("white");
+  text("SCORE: " + score, 500, 200);
+  console.log(score);
+
   ground.display();
   platform.display();
 

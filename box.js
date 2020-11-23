@@ -10,7 +10,7 @@ class Box{
         this.height = height;
         this.image = loadImage("sprites/brick.png");
         World.add(world, this.body);
-        this.visiblilty = 225;
+        this.visiblity = 225;
         this.color = color;
 
       }
@@ -28,10 +28,10 @@ class Box{
        else{
         World.remove(world,this.body)
         push();
-        this.visiblilty = this.visiblilty - 5;
+        this.visiblity = this.visiblity - 5;
         translate(pos.x, pos.y);
         rotate(angle);
-        tint(255,this.visiblilty);
+        tint(255,this.visiblity);
         imageMode(CENTER);
         image(this.image, 0, 0, this.width, this.height);
         pop();
@@ -41,7 +41,8 @@ class Box{
 }
 
    score(){
-     if(this.visiblity < 0 && this.visiblity >-1005){
+     console.log("score")
+     if(this.visiblity < 0 && this.visiblity >= -105){
        score ++
      }
    }
